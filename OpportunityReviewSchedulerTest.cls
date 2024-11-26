@@ -17,6 +17,6 @@ public class OpportunityReviewSchedulerTest {
         Opportunity opp = [SELECT Id, OwnerId FROM Opportunity WHERE StageName != 'Closed Won'];
         List<Task> tasks = [SELECT Id, WhatId, OwnerId FROM Task];
         System.assertEquals(1, tasks.size(),'only 1 task');
-        System.assertEquals(opp.OwnerId,tasks[0].OwnerId,'owner same of both opp aqnd task');
+        System.assertEquals(opp.OwnerId,tasks[0].OwnerId,'owner same of both opp and task');
     }
 }
